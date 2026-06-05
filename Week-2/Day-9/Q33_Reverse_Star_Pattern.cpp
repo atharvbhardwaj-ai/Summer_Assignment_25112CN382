@@ -7,14 +7,12 @@ int main(){
     cin >> rows;
     
     int i,j;
-
-    for(i=1;i<=rows;i++){
-        for(j=1;j<=i;j++){
-            cout << j;     // Ignored Space due to the Pattern Given in Question
+    for(i=rows;i>=1;i--){
+        for(j=i;j>=1;j--){
+            cout << "* ";
         }
         cout <<endl;
     }
-    
-    return 0;
 
+    return 0;
 }

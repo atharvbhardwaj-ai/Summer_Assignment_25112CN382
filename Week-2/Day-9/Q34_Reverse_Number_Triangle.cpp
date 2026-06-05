@@ -7,14 +7,7 @@ int main(){
     cin >> rows;
     
     int i,j;
-
-    for(i=1;i<=rows;i++){
-        for(j=1;j<=i;j++){
-            cout << i;
-        }
-        cout <<endl;
+    for(i=rows;i>=1;i++){
+        for(j=i;j<=rows;j++){}
     }
-    
-    return 0;
-
 }
