@@ -7,6 +7,8 @@ int main(){
     cin >> rows;
 
     int i,j;
+    
+    // Outer Loop Inversion: Reversing row traversal automatically flips the geometry
     for(i=rows;i>=1;i--){
         
         // Printing leading spaces to center-align the row
