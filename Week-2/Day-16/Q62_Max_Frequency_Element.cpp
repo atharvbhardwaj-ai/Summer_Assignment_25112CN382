@@ -16,8 +16,10 @@ void insertionSort(int arr[], int n){
 }
 
 int maxFrequencyElement(int arr[], int n) {
-    int max_count = 1, current_count = 1;
-    int max_freq_element = arr[0];
+    if (n==1){
+        return arr[0];
+    }
+    int max_count = 1, current_count = 1, max_freq_element = arr[0];
 
     for (int i=1; i<n; i++){
         if (arr[i] == arr[i-1]) {
