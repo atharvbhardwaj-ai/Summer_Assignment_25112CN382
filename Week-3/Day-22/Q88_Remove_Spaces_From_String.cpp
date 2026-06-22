@@ -28,7 +28,7 @@ int main() {
 
     int len = removeSpaces(str);
 
-    cout << "Updated String is -\n" << str;
+    cout << "Updated String is - " << str;
 
     return 0;
 }
