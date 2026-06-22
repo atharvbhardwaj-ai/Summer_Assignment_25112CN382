@@ -2,24 +2,30 @@
 #include<string>
 using namespace std;
 
-void findStringLength(string s) {
-    int length = 0;
-    while (s[length] != '\0') {
-        length++;
+int findStringLength (string s){
+    int i = 0;
+
+    while (s[i] != '\0'){
+        i ++;
     }
-    cout << "The length of the string is: " << length << "\n";
+
+    return i;
 }
 
-int main() {
-    string s;
-    cout << "Enter a string: ";
-    getline(cin, s);
+int main(){
+    string str;
+    
+    cout << "Enter the string ";
+    getline(cin, str);
 
-    if (s.empty()) {
-        cout << "String cannot be empty\n";
+    if (str.empty()){
+        cout << "Input String cannot be empty";
         return 1;
     }
 
-    findStringLength(s);
+    int len = findStringLength(str);
+
+    cout << "The String Length is " << len;
+
     return 0;
 }

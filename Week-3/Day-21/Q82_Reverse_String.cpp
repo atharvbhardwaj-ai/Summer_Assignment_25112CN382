@@ -2,33 +2,30 @@
 #include<string>
 using namespace std;
 
-void reverseString(string s) {
-    int n = 0;
-    while (s[n] != '\0') {
-        n++;
+void reverseString (string &s){ // Pass by Reference
+    int len = s.length();
+    int low = 0, high = len - 1;
+    while (low < high) {
+        swap(s[low], s[high]);
+        low ++;
+        high --;
     }
-
-    int start = 0;
-    int end = n - 1;
-    while (start < end) {
-        swap(s[start], s[end]);
-        start++;
-        end--;
-    }
-
-    cout << "Reversed string is: " << s << "\n";
 }
 
-int main() {
-    string s;
-    cout << "Enter a string to reverse: ";
-    getline(cin, s);
+int main(){
+    string str;
+    
+    cout << "Enter String ";
+    getline(cin, str);
 
-    if (s.empty()) {
-        cout << "String cannot be empty\n";
+    if (str.empty()) {
+        cout << "Input String cannot be empty.";
         return 1;
     }
 
-    reverseString(s);
+    reverseString(str);
+
+    cout << "The Reversed String is " << str;
+    
     return 0;
 }

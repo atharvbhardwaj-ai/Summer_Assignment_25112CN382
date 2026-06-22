@@ -2,7 +2,7 @@
 #include<string>
 using namespace std;
 
-void countVowelsAndConsonants(string s) {
+void countVowelsAndConsonants (const string &s){ // const used to avoid accidentally editing the original characters
     int vowels = 0, consonants = 0;
 
     for (int i = 0; s[i] != '\0'; i++) {
@@ -11,26 +11,29 @@ void countVowelsAndConsonants(string s) {
             if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u' ||
                 ch == 'A' || ch == 'E' || ch == 'I' || ch == 'O' || ch == 'U') {
                 vowels++;
-            } else {
+            } 
+            else {
                 consonants++;
             }
         }
     }
 
-    cout << "Vowels: " << vowels << "\n";
-    cout << "Consonants: " << consonants << "\n";
+    cout << "The number of vowels in " << s << " is " << vowels << "\n";
+    cout << "The number of consonants in " << s << " is " << consonants;
 }
 
-int main() {
-    string s;
-    cout << "Enter a string: ";
-    getline(cin, s);
+int main(){
+    string str;
+    
+    cout << "Enter the String ";
+    getline (cin, str);
 
-    if (s.empty()) {
-        cout << "String cannot be empty\n";
+    if (str.empty()) {
+        cout << "Input String cannot be empty!";
         return 1;
     }
 
-    countVowelsAndConsonants(s);
+    countVowelsAndConsonants(str);
+
     return 0;
 }
