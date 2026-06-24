@@ -14,8 +14,9 @@ string removeDuplicateCharacters (const string &s) {
 
     for (int i = 0; i < len; i ++) {
         char ch = s[i];
-        if (freq[ch] == 1) {
+        if(freq[ch]) {
             result += ch;
+            freq[ch] = 0;
         }
     }
 
